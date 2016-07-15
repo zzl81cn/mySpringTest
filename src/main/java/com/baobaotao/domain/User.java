@@ -12,7 +12,7 @@ import java.util.Date;
 public class User implements Serializable {
     private int userId;
     private String userName;
-    private String passWord;
+    private String password;
     private int credits;
     private String lastIp;
     private Date lastVist;
@@ -33,12 +33,12 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassWord(String password) {
+        this.password = password;
     }
 
     public int getCredits() {

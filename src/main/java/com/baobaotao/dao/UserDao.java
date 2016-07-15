@@ -19,12 +19,12 @@ public class UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public int getMatchCount(String userName, String passWord){
+    public int getMatchCount(String userName, String password){
         String sqlStr = "SELECT count(*) FROM t_user "
                 + " WHERE user_name = ? and password = ?";
         //代替的方法为queryForObject(String sql, Object[] args, Class<T> requiredType)。需要返回的是什么类型，就在第三个参数写什么类型。比如int类型就写Integer.class. long类型就写Long.class
-        // sqlStr, Object[]{userName, passWord}
-        return jdbcTemplate.queryForObject(sqlStr, Integer.class, new Object[]{userName, passWord});
+        // sqlStr, Object[]{userName, password}
+        return jdbcTemplate.queryForObject(sqlStr, Integer.class, new Object[]{userName, password});
     }
 
     public User findUserByUserName(final String userName){
