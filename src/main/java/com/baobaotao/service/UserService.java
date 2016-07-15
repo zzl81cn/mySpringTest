@@ -28,6 +28,7 @@ public class UserService {
         return userDao.findUserByUserName(userName);
     }
 
+    // loginSuccess方法根据实参user参数构造出LoginLog对象，并将user.credits递增5（即用户没登录一次赚取5个积分），然后调用userDao更新到t_user中，再调用loginLogDao往t_login_log表中添加一条记录
     public void loginSuccess(User user){
         user.setCredits(5 + user.getCredits());
 
