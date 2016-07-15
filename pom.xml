@@ -51,6 +51,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
+        <!--替代了以前的DBCP-->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jdbc</artifactId>

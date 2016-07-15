@@ -5,8 +5,10 @@
         xmlns:context="http://www.springframework.org/schema/context"
         xsi:schemaLocation="http://www.springframework.org/schema/beans">
 
+    <!--扫描类包，将标注Spring注解的类自动转化Bean，同事完成Bean的注入-->
     <context:component-scan base-package="com.baobaotao.dao"/>
 
+    <!--定义一个jdbc pool的数据源（书中原为DBCP）-->
     <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
             destroy-method="close"
             p:driverClassName="com.mysql.jdbc.Driver"
