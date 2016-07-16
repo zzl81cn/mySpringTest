@@ -3,6 +3,7 @@ package com.baobaotao.web;
 /**
  * Created by zhouzilong on 2016/7/16.
  */
+// POJO Object
 public class LoginCommand {
     private String userName;
     private String password;
